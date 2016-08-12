@@ -1,3 +1,10 @@
 language: node_js
 node_js:
 - node
+deploy:
+  provider: heroku
+  api_key:
+    secure: VV8aFcHwmI8vc/s70ESdDpDNsC6ENdjNRW9A9fTrFMN6GJR02ENXl3g0Kvme667m5voXIKDNvyVRN6TicdZFTgzJrfmhumf/VjGrNIS6cjWXsyDobTn+FZQBTH2V8d1E/hqOJBAyFdWNVgCL0r4YSQX0JcD7ekKHtYbQK7jbhZGkk88CL+hNhbZcB0bJivUcyDkAADNg1hi14ngv67hcayZYu9Phlq9a51PAOoKym7FY2/ag0lh4aOSOA4IGFf/zoajIq55RN3Ro68g7lWs/UAg2wCrxOxu2l+Wf8NGzyzlPF2fR3Y19iuWmX/rO3zSiJAM4pm+qM/Hp3AYTM0v9yV2Pjk+bf3YK3rYfUoAATSIQ8QDP6Rz79jZErDzCnp6WysfAl3FgdW1+UJVHhKvM8Gtgp9IAHaSYxPry3RA9Vnx411k4gj4F14TKfHdAhcjrUuOLZ8CuUmHfSlPd7/BMuFo6ds9rsn5S/v2jntQUh/nCC3p7Zu/tENm5f2beUb090dbuajsQ2NHhi7QQ5TeKZh/H03fnVgVh5QyV1/Bw8w3MdF278VPrJbwHXZudlxe/GV8EFchBVMu3PZNKUJd2PANL+1XMDbOxWm1Yj/JR3lwTWvybj8Ugnszi3BcGonJSvfp7n3H9VyE5DvnP/0YBVJc1vT6ZyeiSqNEbHaktpYU=
+  app: express-api-gp1
+  on:
+    repo: Flapjacks-Gp1/Express-API
