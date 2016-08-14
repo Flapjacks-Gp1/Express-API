@@ -1,8 +1,4 @@
 module.exports = function(app) {
-  // MIDDLEWARE FOR ROUTING
-  // var index = require('../controllers/index.server.controller');
-  // var about = require('../controllers/about.server.controller');
-  // var contact = require('../controllers/contact.server.controller');
 
   var staticPageController = require('../controllers/staticpage.server.controller');
 
@@ -16,6 +12,5 @@ module.exports = function(app) {
 
   app.get('/users',usersController.index);
     //To display data for a particular member
-    //app.get('/users/:name',usersController.index);
   app.get('/users/:name',usersController.show);
  };
