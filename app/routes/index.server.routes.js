@@ -15,7 +15,7 @@ module.exports = function(app) {
   app.get('/contact', staticPageController.renderContact);
 
   app.get('/users',usersController.index);
-  //To display data for a particular member
-  //app.get('/users/:name',usersController.index);
+    //To display data for a particular member
+    //app.get('/users/:name',usersController.index);
   app.get('/users/:name',usersController.show);
  };
