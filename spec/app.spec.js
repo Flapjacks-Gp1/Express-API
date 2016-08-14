@@ -5,11 +5,6 @@ var base_url = "http://localhost:7000/"
 var about_url = base_url + 'about';
 var contact_url = base_url + 'contact';
 
-// function check200(err, response, body) {
-//   expect(response.statusCode).toBe(200);
-//   done();
-// }
-
 
 describe("Express Server", function() {
   describe("GET /", function() {
@@ -46,20 +41,15 @@ describe("Express Server", function() {
           "quote": "I don't know what to say"
         }, done);
     });
-    // it('returns status 404 when name is not found', function(done) {
-    //   console.log("in 404 test");
-    //   supertest(app)
-    //     .get('/users/junius')
-    //     // .set('Accept', 'application/json')
-    //     .expect('Content-Type', /json/)
-    //     .expect(404)
-    //     .end(function(err) {
-    //       var expectedMessage = "Expected response status code to be 404 got 200";
-    //       if (err.message.indexOf(expectedMessage) < 0) {
-    //         assert.fail(err.message, expectedMessage);
-    //       }
-    //     });
-    // });
+    it('returns status 404 when name is not found', function(done) {
+     console.log("in 404 test");
+     supertest(app)
+       .get('/users/junius')
+       .set('Accept', 'application/json')
+       .expect('Content-Type', /json/)
+       .expect(404);
+       done();
+   });
   });
 
   describe("GET /about", function() {
